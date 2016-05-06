@@ -1,4 +1,4 @@
-openscad (2016.03-1) UNRELEASED; urgency=low
+openscad (2016.05-1) UNRELEASED; urgency=low
 
   [ Christian M. Amsüss ]
   * Initial packaging
@@ -7580,4 +7580,28 @@ openscad (2016.03-1) UNRELEASED; urgency=low
   [ Kelly Lauren-Summer Becker-Neuding ]
   * [f7ac2cc] Added debian dir from official OpenScad ubuntu PPA and updated source format for gbp.conf
 
- -- Kelly Lauren-Summer Becker-Neuding <kbecker@kellybecker.me>  Thu, 31 Mar 2016 18:30:38 -0700
+  [ amarjeetkapoor1 ]
+  * [84d260f] shortkey for view all
+
+  [ jasleenkaur ]
+  * [588ec0f] added line number option on editor preferences
+  * [012a4a9] minor changes in line numering check Box
+
+  [ Marius Kintel ]
+  * [64e65b8] Update README.md
+
+  [ javialamo ]
+  * [f3fd2c3] Updated spanish translation
+
+  [ Anna ]
+  * [3ae3704] Do not clear handler after save
+  * [24375f3] Disable spinbox when it has no effect. Fix issue #1187
+
+  [ Marius Kintel ]
+  * [3e614de] #1625 Crash fix: Don't attempt to export an empty geometry
+
+  [ Kelly Lauren-Summer Becker-Neuding ]
+  * [aa29fcf] Added debian dir from official OpenScad ubuntu PPA and updated source format for gbp.conf
+  * [6ceac45] Updating Build Process for git-buildpackage - Updated debian/rules - Updated debian/gbp.conf - Updated debian/source/format
+
+ -- Kelly Lauren-Summer Becker-Neuding <kbecker@kellybecker.me>  Thu, 05 May 2016 20:57:38 -0700
