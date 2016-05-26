@@ -1,4 +1,4 @@
-openscad (2016.05-1) UNRELEASED; urgency=low
+openscad (2016.05-2) UNRELEASED; urgency=low
 
   [ Christian M. Amsüss ]
   * Initial packaging
@@ -7604,4 +7604,28 @@ openscad (2016.05-1) UNRELEASED; urgency=low
   * [aa29fcf] Added debian dir from official OpenScad ubuntu PPA and updated source format for gbp.conf
   * [6ceac45] Updating Build Process for git-buildpackage - Updated debian/rules - Updated debian/gbp.conf - Updated debian/source/format
 
- -- Kelly Lauren-Summer Becker-Neuding <kbecker@kellybecker.me>  Thu, 05 May 2016 20:57:38 -0700
+  [ jasleenkaur ]
+  * [57a0c75] shrink margin on demand
+  * [dbd2595] shrink on demand
+  * [d640838] Shrink margin on demand
+  * [1517b28] margins set to display markers
+
+  [ Anna ]
+  * [1345d66] Trying to add preferences item
+  * [3d72834] Add spacer
+  * [155398c] Add scintilla backspace unindents feature
+
+  [ Marius Kintel ]
+  * [00090fd] removed unnecessary include
+  * [d3db6a6] Revert "removed unnecessary include"
+    This reverts commit 00090fde1a83a50b2e385ffa72312dcc2e3ba199.
+  * [7b8265a] #872 Use Ctrl-Shift-F to trigger Find&Replace on Windows, as AltGr is used to simulate Ctrl+Alt on that platform
+  * [527fc31] Accept backspace unindent feature, but set default value to false
+  * [09c8d9b] removed obsolete env files
+
+  [ Kelly Lauren-Summer Becker-Neuding ]
+  * [0fd173e] Added debian dir from official OpenScad ubuntu PPA and updated source format for gbp.conf
+  * [80320a5] Updating Build Process for git-buildpackage - Updated debian/rules - Updated debian/gbp.conf - Updated debian/source/format
+  * [883e770] Updated Changelog, GBP.conf and Include-Binaries
+
+ -- Kelly Lauren-Summer Becker-Neuding <kbecker@kellybecker.me>  Thu, 26 May 2016 14:19:30 -0700
