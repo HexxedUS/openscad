@@ -1,3 +1,12 @@
+# Build Instructions
+
+I am adding a Dockerfile for builds to make this a little simpler. Soon.
+
+    $ git clone git://github.com/HexxedUS/openscad.git
+    $ cd openscad && gbp buildpackage -us -uc
+
+# Original Documentation
+
 [![Travis CI](https://api.travis-ci.org/openscad/openscad.png)](https://travis-ci.org/openscad/openscad)
 [![Coverity Status](https://scan.coverity.com/projects/2510/badge.svg)](https://scan.coverity.com/projects/2510)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/openscad/openscad/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
@@ -85,9 +94,9 @@ To build OpenSCAD, you need some libraries and tools. The version
 numbers in brackets specify the versions which have been used for
 development. Other versions may or may not work as well.
 
-If you're using a newer version of Ubuntu, you can install these 
-libraries from aptitude. If you're using Mac, or an older Linux/BSD, there 
-are build scripts that download and compile the libraries from source. 
+If you're using a newer version of Ubuntu, you can install these
+libraries from aptitude. If you're using Mac, or an older Linux/BSD, there
+are build scripts that download and compile the libraries from source.
 Follow the instructions for the platform you're compiling on below.
 
 * A C++ compiler supporting C++11
@@ -115,7 +124,7 @@ Install git (http://git-scm.com/) onto your system. Then run a clone:
 
     git clone git://github.com/openscad/openscad.git
 
-This will download the latest sources into a directory named 'openscad'. 
+This will download the latest sources into a directory named 'openscad'.
 
 To pull the MCAD library (http://reprap.org/wiki/MCAD), do the following:
 
@@ -165,29 +174,29 @@ For the adventurous, it might be possible to build OpenSCAD using _MacPorts_ or 
 
 ### Building for Linux/BSD
 
-First, make sure that you have git installed (often packaged as 'git-core' 
-or 'scmgit'). Once you've cloned this git repository, download and install 
-the dependency packages listed above using your system's package 
-manager. A convenience script is provided that can help with this 
+First, make sure that you have git installed (often packaged as 'git-core'
+or 'scmgit'). Once you've cloned this git repository, download and install
+the dependency packages listed above using your system's package
+manager. A convenience script is provided that can help with this
 process on some systems:
 
     sudo ./scripts/uni-get-dependencies.sh
 
-After installing dependencies, check their versions. You can run this 
+After installing dependencies, check their versions. You can run this
 script to help you:
 
     ./scripts/check-dependencies.sh
 
-Take care that you don't have old local copies anywhere (/usr/local/). 
-If all dependencies are present and of a high enough version, skip ahead 
-to the Compilation instructions. 
+Take care that you don't have old local copies anywhere (/usr/local/).
+If all dependencies are present and of a high enough version, skip ahead
+to the Compilation instructions.
 
 ### Building for Linux/BSD on systems with older or missing dependencies
 
-If some of your system dependency libraries are missing or old, then you 
-can download and build newer versions into $HOME/openscad_deps by 
-following this process. First, run the script that sets up the 
-environment variables. 
+If some of your system dependency libraries are missing or old, then you
+can download and build newer versions into $HOME/openscad_deps by
+following this process. First, run the script that sets up the
+environment variables.
 
     source ./scripts/setenv-unibuild.sh
 
@@ -195,8 +204,8 @@ Then run the script to compile all the prerequisite libraries above:
 
     ./scripts/uni-build-dependencies.sh
 
-Note that huge dependencies like gcc, qt, or glib2 are not included 
-here, only the smaller ones (boost, CGAL, opencsg, etc). After the 
+Note that huge dependencies like gcc, qt, or glib2 are not included
+here, only the smaller ones (boost, CGAL, opencsg, etc). After the
 build, again check dependencies.
 
     ./scripts/check-dependencies.sh
@@ -209,9 +218,9 @@ OpenSCAD for Windows is usually cross-compiled from Linux. If you wish to
 attempt an MSVC build on Windows, please see this site:
 http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Building_on_Windows
 
-To cross-build, first make sure that you have development tools 
-installed to get GCC. Then after you've cloned this git repository, 
-start a new clean bash shell and run the script that sets up the environment 
+To cross-build, first make sure that you have development tools
+installed to get GCC. Then after you've cloned this git repository,
+start a new clean bash shell and run the script that sets up the environment
 variables.
 
     source ./scripts/setenv-mingw-xbuild.sh 32
@@ -220,8 +229,8 @@ Then run the script to download & compile all the prerequisite libraries above:
 
     ./scripts/mingw-x-build-dependencies.sh 32
 
-Note that this process can take several hours, as it uses the 
-http://mxe.cc system to cross-build many libraries. After it is 
+Note that this process can take several hours, as it uses the
+http://mxe.cc system to cross-build many libraries. After it is
 complete, build OpenSCAD and package it to an installer:
 
     ./scripts/release-common.sh mingw32
@@ -232,13 +241,13 @@ If you wish you can only build the openscad.exe binary:
     qmake ../openscad.pro CONFIG+=mingw-cross-env
     make
 
-For a 64-bit Windows cross-build, replace 32 with 64 in the above instructions. 
+For a 64-bit Windows cross-build, replace 32 with 64 in the above instructions.
 
 ### Compilation
 
 First, run 'qmake openscad.pro' from Qt to generate a Makefile.
 
-On some systems, depending on which version(s) of Qt you have installed, you may need to specify which version you want to use, e.g. by running 'qmake4', 'qmake-qt4', 'qmake -qt=qt5', or something alike. 
+On some systems, depending on which version(s) of Qt you have installed, you may need to specify which version you want to use, e.g. by running 'qmake4', 'qmake-qt4', 'qmake -qt=qt5', or something alike.
 
 Then run make. Finally you might run 'make install' as root or simply copy the
 'openscad' binary (OpenSCAD.app on Mac OS X) to the bin directory of your choice.
